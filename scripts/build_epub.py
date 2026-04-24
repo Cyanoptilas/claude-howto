@@ -109,12 +109,10 @@ class EPUBConfig:
     author: str = "Claude Code Community"
 
     # Language-specific metadata
-    vi_title: str = "Hướng Dẫn Claude Code"
-    vi_subtitle: str = "Làm chủ Claude Code trong một cuối tuần"
     en_title: str = "Claude Code How-To Guide"
     en_subtitle: str = "Master Claude Code in a Weekend"
-    zh_title: str = "Claude Code 使用指南"
-    zh_subtitle: str = "一个周末掌握 Claude Code"
+    ja_title: str = "Claude Code 使い方ガイド"
+    ja_subtitle: str = "週末でマスターする Claude Code"
 
     # Cover Settings
     cover_width: int = 600
@@ -1059,10 +1057,9 @@ def main() -> int:
         "--lang",
         type=str,
         default="en",
-        choices=["en", "vi", "zh"],
+        choices=["en", "ja"],
         help=(
-            "Language code: 'en' for English, 'vi' for Vietnamese, "
-            "'zh' for Chinese (default: en)"
+            "Language code: 'en' for English, 'ja' for Japanese (default: en)"
         ),
     )
     parser.add_argument(
@@ -1082,8 +1079,7 @@ def main() -> int:
     # Each entry: (source root, default output filename, title)
     lang_map: dict[str, tuple[Path, str, str]] = {
         "en": (repo_root, "claude-howto-guide.epub", EPUBConfig.en_title),
-        "vi": (repo_root / "vi", "claude-howto-guide-vi.epub", EPUBConfig.vi_title),
-        "zh": (repo_root / "zh", "claude-howto-guide-zh.epub", EPUBConfig.zh_title),
+        "ja": (repo_root / "ja", "claude-howto-guide-ja.epub", EPUBConfig.ja_title),
     }
     root, default_output_name, title = lang_map[args.lang]
     output = args.output or (repo_root / default_output_name)
