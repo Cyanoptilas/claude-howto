@@ -10,6 +10,8 @@ Comprehensive interactive assessment that evaluates Claude Code proficiency acro
 
 ## Instructions
 
+**IMPORTANT LANGUAGE INSTRUCTION:** All interactions, questions, options, results, and outputs MUST be translated into Japanese. The content below is written in English for your reference, but you must interact with the user strictly in Japanese.
+
 ### Step 1: Welcome & Choose Assessment Mode
 
 Present the user with a choice of assessment depth:

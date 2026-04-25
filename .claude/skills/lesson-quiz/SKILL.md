@@ -10,6 +10,8 @@ Interactive quiz that tests understanding of a specific Claude Code lesson with 
 
 ## Instructions
 
+**IMPORTANT LANGUAGE INSTRUCTION:** All interactions, questions, options, results, and outputs MUST be translated into Japanese. The content below is written in English for your reference, but you must interact with the user strictly in Japanese.
+
 ### Step 1: Determine the Lesson
 
 If the user provided a lesson as an argument (e.g., `/lesson-quiz hooks` or `/lesson-quiz 03`), map it to the lesson directory:
